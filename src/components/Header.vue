@@ -27,7 +27,7 @@
             </li>
           </ul>
         </nav>
-        <HeaderBurger @toggleMenu="activateMenu" />
+        <HeaderBurger @toggleMenu="activateDropdown" />
       </div>
     </div>
   </header>
@@ -42,9 +42,10 @@ export default {
   },
 
   methods: {
-    activateMenu() {
+    activateDropdown() {
       let headerButton = document.querySelector(".header_burger");
       let headerMenu = document.querySelector(".header_menu");
+
       document.body.classList.toggle("lock");
       headerButton.classList.toggle("active");
       headerMenu.classList.toggle("active");
@@ -52,6 +53,7 @@ export default {
     removeDropdown() {
       let headerButton = document.querySelector(".header_burger");
       let headerMenu = document.querySelector(".header_menu");
+
       document.body.classList.remove("lock");
       headerButton.classList.remove("active");
       headerMenu.classList.remove("active");

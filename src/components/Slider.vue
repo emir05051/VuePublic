@@ -58,6 +58,15 @@ export default {
 };
 </script>
 <style>
+.div {
+  height: 100%;
+}
+.our_team {
+  height: 100%;
+}
+.slider {
+  height: 80%;
+}
 @media (max-width: 768px) {
   .hooper-slide .card img {
     height: 420px !important;

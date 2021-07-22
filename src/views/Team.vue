@@ -1,12 +1,15 @@
 <template>
-  <div class="">
+  <div class="our_team">
     <div class="padding"></div>
     <Slider />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Slider from "@/components/Slider.vue";
+import Footer from "@/components/Footer.vue";
+
 export default {
   name: "Team",
   data() {
@@ -17,6 +20,7 @@ export default {
   },
   components: {
     Slider,
+    Footer,
   },
 };
 </script>
