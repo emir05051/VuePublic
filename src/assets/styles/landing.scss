@@ -1,0 +1,46 @@
+.main {
+  height: 100%;
+  overflow: hidden;
+  & .landing {
+    overflow: auto;
+    position: relative;
+    height: 100%;
+    & .ul a {
+      transform: rotateY(90deg);
+      transition: transform 0.3s linear;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #000;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    & h1 {
+      cursor: pointer;
+    }
+  }
+  & .landing::before {
+    content: "";
+    position: fixed;
+    left: -5%;
+    // top: 12%;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 110%;
+    height: 110%;
+    // background: url("../assets/img/oldManx4.jpg") no-repeat;
+    background-size: 100% auto;
+    filter: blur(1px) sepia(60%);
+    @media (max-width: 1000px) {
+      & {
+        background-position: center;
+        background-size: 160% 100%;
+      }
+    }
+  }
+}
+
+.landing_header {
+  margin-top: 25%;
+}

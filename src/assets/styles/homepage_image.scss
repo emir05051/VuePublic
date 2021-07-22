@@ -1,0 +1,61 @@
+.content_image {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    background: url("../../../public/img/magnifier.png") center center no-repeat;
+    opacity: 0;
+    transition: 0.15s ease-out;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    background-color: #949edf;
+  }
+  &:hover::before {
+    opacity: 1;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .content_image {
+    &::before {
+      top: 45% !important;
+      left: 50% !important;
+    }
+    &:hover::before {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .content_image {
+    &::before {
+      top: 40% !important;
+      left: 47% !important;
+    }
+    &:hover::before {
+      width: 48px !important;
+      height: 48px !important;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .content_image {
+    &::before {
+      top: 35% !important;
+      left: 47% !important;
+    }
+    &:hover::before {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+}

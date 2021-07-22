@@ -1,0 +1,18 @@
+.home {
+  & .homepage {
+    height: 300px;
+    background: url("../../../public/img/main.jpg") no-repeat;
+
+    background-position: center;
+    background-size: auto 100%;
+
+    & h1 {
+      text-shadow: 2px 0px 1px grey;
+    }
+  }
+  & .p-border {
+    font-size: 20px;
+    border-top: 3px double rgb(76, 0, 255);
+    border-bottom: 3px double rgb(76, 0, 255);
+  }
+}
