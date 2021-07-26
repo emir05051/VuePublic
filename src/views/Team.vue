@@ -1,14 +1,15 @@
 <template>
   <div class="our_team">
     <div class="padding"></div>
-    <Slider />
+
+    <TeamSelect />
     <Footer />
   </div>
 </template>
 
 <script>
-import Slider from "@/components/Slider.vue";
 import Footer from "@/components/Footer.vue";
+import TeamSelect from "@/components/TeamSelect.vue";
 
 export default {
   name: "Team",
@@ -19,7 +20,7 @@ export default {
     };
   },
   components: {
-    Slider,
+    TeamSelect,
     Footer,
   },
 };

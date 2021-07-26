@@ -1,61 +1,95 @@
 <template>
-  <div class="col-12 col-lg-6">
-    <h3>Доходность портфеля ЕНПФ</h3>
-    <GChart type="ColumnChart" :data="chartData" @ready="onReady" />
+  <div id="app">
+    <GChart
+      :settings="{ packages: ['bar'] }"
+      :data="chartData"
+      :options="chartOptions"
+      :createChart="(el, google) => new google.charts.Bar(el)"
+      @ready="onChartReady"
+    />
   </div>
 </template>
 
 <script>
+import { GChart } from "vue-google-charts";
 export default {
-  name: "Column1",
+  name: "App",
+  components: {
+    GChart,
+  },
   data() {
     return {
-      chartData: null,
+      chartsLib: null,
+      chartData: [
+        ["", "Средняя доходность ПИФов УК", "Инфляция", "Доходность ЕНПФ"],
+        [
+          "2011",
+          { v: -8.9, f: "-8.9%" },
+          { v: 7.4, f: "7.4%" },
+          { v: 2.6, f: "2.6%" },
+        ],
+        [
+          "2012",
+          { v: 11.7, f: "11.7%" },
+          { v: 6.0, f: "6.0%" },
+          { v: 4.0, f: "4.0%" },
+        ],
+        [
+          "2013",
+          { v: 9.0, f: "9.0%" },
+          { v: 4.8, f: "4.8%" },
+          { v: 2.4, f: "2.4%" },
+        ],
+        [
+          "2014",
+          { v: 10.2, f: "10.2%" },
+          { v: 7.4, f: "7.4%" },
+          { v: 6.3, f: "6.3%" },
+        ],
+        [
+          "2015",
+          { v: 74.2, f: "74.2%" },
+          { v: 13.6, f: "13.6%" },
+          { v: 15.7, f: "15.7%" },
+        ],
+        [
+          "2016",
+          { v: 10.3, f: "10.3%" },
+          { v: 8.5, f: "8.5%" },
+          { v: 7.9, f: "7.9%" },
+        ],
+        [
+          "2017",
+          { v: 13.0, f: "13.0%" },
+          { v: 7.1, f: "7.1%" },
+          { v: 7.9, f: "7.9%" },
+        ],
+        [
+          "2018",
+          { v: 5.7, f: "5.7%" },
+          { v: 5.3, f: "5.3%" },
+          { v: 11.3, f: "11.3%" },
+        ],
+        [
+          "2019",
+          { v: 27.8, f: "27.8%" },
+          { v: 5.4, f: "5.4%" },
+          { v: 6.6, f: "6.6%" },
+        ],
+        [
+          "2020",
+          { v: 49.5, f: "49.5%" },
+          { v: 7.5, f: "7.5%" },
+          { v: 10.9, f: "10.9%" },
+        ],
+      ],
     };
   },
-  methods: {
-    onReady(chart, google) {
-      this.createDataTable(chart, google);
-    },
-    createDataTable(chart, google) {
-      var data = google.visualization.arrayToDataTable([
-        ["", "Доходность ЕНПФ", "Инфляция"],
-        ["2011", { v: 2.6, f: "2.6%" }, { v: 7.4, f: "7.4%" }],
-        ["2012", { v: 4.0, f: "4.0%" }, { v: 6.0, f: "6.0%" }],
-        ["2013", { v: 2.4, f: "2.4%" }, { v: 4.8, f: "4.8%" }],
-        ["2014", { v: 6.3, f: "6.3%" }, { v: 7.4, f: "7.4%" }],
-        ["2015", { v: 15.7, f: "15.7%" }, { v: 13.6, f: "13.6%" }],
-        ["2016", { v: 7.9, f: "7.9%" }, { v: 8.5, f: "8.5%" }],
-        ["2017", { v: 7.9, f: "7.9%" }, { v: 7.1, f: "7.1%" }],
-        ["2018", { v: 11.3, f: "11.3%" }, { v: 5.3, f: "5.3%" }],
-        ["2019", { v: 6.6, f: "6.6%" }, { v: 5.4, f: "5.4%" }],
-        ["2020", { v: 10.9, f: "10.9%" }, { v: 7.5, f: "7.5%" }],
-      ]);
-
-      var view = new google.visualization.DataView(data);
-      view.setColumns([
-        0,
-        1,
-        {
-          calc: "stringify",
-          sourceColumn: 1,
-          type: "string",
-          role: "annotation",
-        },
-        2,
-        {
-          calc: "stringify",
-          sourceColumn: 2,
-          type: "string",
-          role: "annotation",
-        },
-      ]);
-      var options = {
-        colors: ["#3dc55e", "#5d9edb"],
-        bar: { groupWidth: "70%" },
-        height: 450,
-        chartArea: { width: "100%", height: "80%" },
-        legend: { position: "bottom" },
+  computed: {
+    chartOptions() {
+      if (!this.chartsLib) return null;
+      return this.chartsLib.charts.Bar.convertOptions({
+        legend: { position: "none" },
         vAxis: {
           gridlines: { count: 0 },
           textStyle: {
@@ -63,10 +97,17 @@ export default {
             color: "White",
           },
         },
-      };
-      chart.draw(view, options);
+
+        width: window.innerWidth - 35,
+        height: 500,
+        colors: ["#1b9e77", "#d95f02", "#7570b3"],
+      });
+    },
+  },
+  methods: {
+    onChartReady(chart, google) {
+      this.chartsLib = google;
     },
   },
 };
 </script>
-<style></style>

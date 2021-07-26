@@ -13,22 +13,26 @@
       />
     </div>
     <Table />
-    <div class="container">
-      <Paragraph msg="Преимущества УИП" />
+    <Paragraph msg="Преимущества УИП" />
+    <h3>
+      Доходность
+      <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ПИФов СС</a>
+      и
+      <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ЕНПФ</a>
+    </h3>
+    <div class="container ml-0 mr-0">
       <div class="container">
-        <div class="row">
-          <Column1 />
-          <Column2 />
+        <div class="row w-100">
+          <Column1 v-show="windowWidth" />
+          <Column2 v-show="!windowWidth" />
         </div>
       </div>
-      <Paragraph msg="Контроль деятельности УИП" />
     </div>
+    <Paragraph msg="Контроль деятельности УИП" />
     <div class="container">
       <Collapse />
     </div>
-    <div class="container">
-      <Paragraph msg="Защита интересов вкладчиков в УИП" />
-    </div>
+    <Paragraph msg="Защита интересов вкладчиков в УИП" />
     <div class="container">
       <p>
         Обеспечение минимального уровня доходности. Отклонение на более чем 30%,
@@ -39,6 +43,10 @@
         Банк-Кастодиан
       </p>
     </div>
+    <Paragraph msg="Ключевые показатели СС" />
+    <div class="container">
+      <Pie />
+    </div>
   </div>
 </template>
 
@@ -48,9 +56,20 @@ import Column1 from "@/components/Column1.vue";
 import Column2 from "@/components/Column2.vue";
 import Paragraph from "@/components/Paragraph.vue";
 import Collapse from "@/components/Collapse.vue";
+import Pie from "@/components/Pie.vue";
 
 export default {
   name: "HomePage",
+  mounted() {
+    if (window.innerWidth <= 1100) {
+      this.windowWidth = true;
+    } else {
+      this.windowWidth = false;
+    }
+  },
+  data: () => ({
+    windowWidth: false,
+  }),
   methods: {
     openNewTab() {
       window.open("http://172.31.80.1:8082/pres.pdf");
@@ -62,6 +81,7 @@ export default {
     Column2,
     Paragraph,
     Collapse,
+    Pie,
   },
 };
 </script>

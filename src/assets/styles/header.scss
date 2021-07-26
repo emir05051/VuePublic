@@ -1,6 +1,8 @@
 .padding {
   padding-top: 100px;
+
   background-color: #14112ce6;
+  min-width: 360px;
 }
 .header {
   position: fixed;
@@ -69,6 +71,11 @@
   .header {
     &::before {
       height: 80px;
+    }
+  }
+  @media (max-width: 440px) {
+    .padding {
+      width: 440px;
     }
   }
   .padding {
