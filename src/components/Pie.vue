@@ -1,24 +1,27 @@
 <template>
-  <div id="app">
-    <GChart
-      type="PieChart"
-      :data="chartData"
-      :options="chartOptions"
-      style="width: 900px; height: 500px"
-    />
+  <div>
+    <GChart type="PieChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
 <script>
 import { GChart } from "vue-google-charts";
 export default {
-  name: "App",
+  name: "PieChart",
   components: {
     GChart,
   },
+  mounted() {
+    if (window.innerWidth <= 680) {
+      console.log(this.chartOptions);
+      this.chartOptions.legend.position = "bottom";
+    } else {
+      this.chartOptions.legend.position = "right";
+    }
+  },
   data() {
     return {
-      // Array will be automatically processed with visualization.arrayToDataTable function
+      windowIsSmall: false,
       chartData: [
         ["Name", "Amount"],
         ["Наличные деньги", 1],
@@ -34,6 +37,8 @@ export default {
       ],
       chartOptions: {
         title: "Структура активов фонда по видам финансовых инструментов:",
+        width: window.innerWidth,
+        height: window.innerWidth / 2,
         titleTextStyle: {
           bold: false,
           fontSize: 15,
@@ -43,7 +48,8 @@ export default {
           showColorCode: true,
           ignoreBounds: true,
         },
-        chartArea: { width: "100%", height: "70%" },
+        chartArea: { width: "70%", height: "60%" },
+        legend: { position: "bottom" },
       },
     };
   },

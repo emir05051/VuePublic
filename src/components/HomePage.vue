@@ -20,7 +20,7 @@
       и
       <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ЕНПФ</a>
     </h3>
-    <div class="container ml-0 mr-0">
+    <div class="container ml-0 mr-0 p-0">
       <div class="container">
         <div class="row w-100">
           <Column1 v-show="windowWidth" />
@@ -44,8 +44,11 @@
       </p>
     </div>
     <Paragraph msg="Ключевые показатели СС" />
-    <div class="container">
+    <div class="container m-0 p-0 overflow-hidden">
       <Pie />
+    </div>
+    <div class="container">
+      <Slider />
     </div>
   </div>
 </template>
@@ -57,6 +60,7 @@ import Column2 from "@/components/Column2.vue";
 import Paragraph from "@/components/Paragraph.vue";
 import Collapse from "@/components/Collapse.vue";
 import Pie from "@/components/Pie.vue";
+import Slider from "@/components/Slider.vue";
 
 export default {
   name: "HomePage",
@@ -82,6 +86,7 @@ export default {
     Paragraph,
     Collapse,
     Pie,
+    Slider,
   },
 };
 </script>
