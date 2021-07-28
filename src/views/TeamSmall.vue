@@ -2,20 +2,20 @@
   <div class="our_team">
     <div class="padding"></div>
 
-    <TeamSelect />
+    <TeamSelectSmall />
     <Footer />
   </div>
 </template>
 
 <script>
 import Footer from "@/components/Footer.vue";
-import TeamSelect from "@/components/TeamSelect.vue";
+import TeamSelectSmall from "@/components/TeamSelectSmall.vue";
 
 export default {
-  name: "Team",
+  name: "TeamSmall",
 
   components: {
-    TeamSelect,
+    TeamSelectSmall,
     Footer,
   },
 };

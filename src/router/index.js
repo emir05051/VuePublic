@@ -24,6 +24,25 @@ const routes = [
     path: "/team",
     name: "OurTeam",
     component: () => import("../views/Team.vue"),
+    beforeEnter: (to, from, next) => {
+      console.log(to);
+      console.log(from);
+      if (window.innerWidth < 540) {
+        router.push({ name: "OurTeamSmall" });
+      }
+      next();
+    },
+  },
+  {
+    path: "/team_small",
+    name: "OurTeamSmall",
+    component: () => import("../views/TeamSmall.vue"),
+  },
+  {
+    path: "/team/:id",
+    name: "PersonDetails",
+    component: () => import("../views/PersonDetails.vue"),
+    props: true,
   },
 ];
 

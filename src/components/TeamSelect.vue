@@ -51,6 +51,11 @@ export default {
   components: {
     Person,
   },
+  beforeRouteEnter: (to, from, next) => {
+    console.log(to);
+    console.log(from);
+    next();
+  },
 };
 </script>
 <style>

@@ -27,3 +27,6 @@ export default {
   name: "Footer",
 };
 </script>
+<style lang="scss">
+@import "../assets/styles/footer.scss";
+</style>

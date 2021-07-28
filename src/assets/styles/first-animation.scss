@@ -1,0 +1,56 @@
+.landing h2 {
+  color: #000;
+  user-select: none;
+  color: #00bfff;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #ff0022;
+    transition: width 0.5s;
+  }
+}
+.column:hover h2 {
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #000;
+}
+.column:hover h2:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: rgb(255, 0, 0);
+  transition: width 0.5s;
+}
+.landingpage .padding {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  background-color: #17132e;
+}
+.landingpage .header_menu {
+  display: none;
+}
+.landing_logo {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 60px;
+  }
+}

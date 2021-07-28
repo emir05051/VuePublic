@@ -2,7 +2,7 @@
   <div class="slider">
     <VueSlickCarousel v-bind="settings">
       <div class="slider_item">
-        <img src="img/stats1.png" alt="" /><br />
+        <img src="img/stats1.png" alt="" />
         <h2>Активы</h2>
         <h3>3 646 207</h3>
         <h4>+35%</h4>
@@ -86,3 +86,6 @@ export default {
   }),
 };
 </script>
+<style lang="scss">
+@import "../assets/styles/slider.scss";
+</style>

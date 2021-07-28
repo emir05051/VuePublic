@@ -1,46 +1,50 @@
-.main {
-  height: 100%;
+.landingpage {
+  height: 100vh;
   overflow: hidden;
   & .landing {
-    overflow: auto;
+    overflow: hidden;
     position: relative;
     height: 100%;
-    & .ul a {
-      transform: rotateY(90deg);
-      transition: transform 0.3s linear;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #000;
-      &:hover {
-        text-decoration: none;
+    justify-content: space-between;
+    height: 100%;
+    cursor: pointer;
+    & .column {
+      border: 1px solid #000;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      h2 {
+        margin: auto 0;
+        color: #fff;
       }
-    }
-    & h1 {
-      cursor: pointer;
-    }
-  }
-  & .landing::before {
-    content: "";
-    position: fixed;
-    left: -5%;
-    // top: 12%;
-    right: 0;
-    z-index: -1;
-    display: block;
-    width: 110%;
-    height: 110%;
-    // background: url("../assets/img/oldManx4.jpg") no-repeat;
-    background-size: 100% auto;
-    filter: blur(1px) sepia(60%);
-    @media (max-width: 1000px) {
-      & {
-        background-position: center;
-        background-size: 160% 100%;
+      a {
+        display: none;
       }
     }
   }
 }
+@media (max-width: 520px) {
+  .landing {
+    flex-direction: column !important;
+    justify-content: space-around !important;
+  }
+}
 
-.landing_header {
-  margin-top: 25%;
+.landing {
+  background: linear-gradient(-45deg, #dd03e4, #5611ec, red);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

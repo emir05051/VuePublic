@@ -1,7 +1,9 @@
 <template>
   <div class="home pb-5">
     <div class="homepage container p-5">
-      <h1 class="text-body">Управление пенсионными активами</h1>
+      <h1 class="text-body" style="font-size: 2rem">
+        Управление пенсионными активами
+      </h1>
       <b-button pill variant="primary" @click="openNewTab" class="p-3 mt-3">
         Информация по продукту
       </b-button>
@@ -13,7 +15,9 @@
       />
     </div>
     <Table />
-    <Paragraph msg="Преимущества УИП" />
+    <div class="container">
+      <Paragraph msg="Преимущества УИП" />
+    </div>
     <h3>
       Доходность
       <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ПИФов СС</a>
@@ -21,30 +25,38 @@
       <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ЕНПФ</a>
     </h3>
     <div class="container ml-0 mr-0 p-0">
-      <div class="container">
-        <div class="row w-100">
-          <Column1 v-show="windowWidth" />
-          <Column2 v-show="!windowWidth" />
-        </div>
-      </div>
+      <Column1 v-show="windowWidth" />
+      <Column2 v-show="!windowWidth" />
     </div>
-    <Paragraph msg="Контроль деятельности УИП" />
+    <div class="container">
+      <Paragraph msg="Контроль деятельности УИП" />
+    </div>
     <div class="container">
       <Collapse />
     </div>
-    <Paragraph msg="Защита интересов вкладчиков в УИП" />
     <div class="container">
-      <p>
-        Обеспечение минимального уровня доходности. Отклонение на более чем 30%,
-        финансируется за счет собственных средств ук Прозрачность деятельности
-        УК.Инвест. Декларация и ежемесячная отчетность по портфелю будет
-        размещаться на сайте УК и ЕНПФ Смена УК 1 раз в год, возрат в ЕНПФ через
-        2 года Контроль деятельности УПА со стороны АРРФР РК, ЕНПФ,
-        Банк-Кастодиан
-      </p>
+      <Paragraph msg="Защита интересов вкладчиков в УИП" />
     </div>
-    <Paragraph msg="Ключевые показатели СС" />
-    <div class="container m-0 p-0 overflow-hidden">
+    <div class="container">
+      <ul class="benefit_list">
+        <li>
+          Обеспечение минимального уровня доходности. Отклонение на более чем
+          30%, финансируется за счет собственных средств ук
+        </li>
+        <li>
+          Прозрачность деятельности УК.Инвест. Декларация и ежемесячная
+          отчетность по портфелю будет размещаться на сайте УК и ЕНПФ
+        </li>
+        <li>Смена УК 1 раз в год, возрат в ЕНПФ через 2 года</li>
+        <li>
+          Контроль деятельности УПА со стороны АРРФР РК, ЕНПФ, Банк-Кастодиан
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <Paragraph msg="Ключевые показатели СС" />
+    </div>
+    <div class="container m-0 p-0 w-100">
       <Pie />
     </div>
     <div class="container">
@@ -90,3 +102,7 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+@import "../assets/styles/homepage.scss";
+@import "../assets/styles/homepage_image.scss";
+</style>

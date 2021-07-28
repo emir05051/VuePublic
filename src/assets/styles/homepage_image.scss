@@ -3,7 +3,7 @@
   cursor: pointer;
   &::before {
     content: "";
-    background: url("../../../public/img/magnifier.png") center center no-repeat;
+    background: url("/img/magnifier.png") center center no-repeat;
     opacity: 0;
     transition: 0.15s ease-out;
     width: 0px;

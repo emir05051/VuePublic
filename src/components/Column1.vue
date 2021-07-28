@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <GChart
       :settings="{ packages: ['bar'] }"
       :data="chartData"
@@ -11,12 +11,8 @@
 </template>
 
 <script>
-import { GChart } from "vue-google-charts";
 export default {
   name: "App",
-  components: {
-    GChart,
-  },
   data() {
     return {
       chartsLib: null,
@@ -91,10 +87,9 @@ export default {
       return this.chartsLib.charts.Bar.convertOptions({
         legend: { position: "none" },
         vAxis: {
-          gridlines: { count: 0 },
+          gridlines: { count: 1 },
           textStyle: {
-            fontSize: 1,
-            color: "White",
+            fontSize: 10,
           },
         },
 

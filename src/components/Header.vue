@@ -43,22 +43,29 @@ export default {
 
   methods: {
     activateDropdown() {
-      let headerButton = document.querySelector(".header_burger");
-      let headerMenu = document.querySelector(".header_menu");
-
-      document.body.classList.toggle("lock");
-      headerButton.classList.toggle("active");
-      headerMenu.classList.toggle("active");
+      this.toggleDropdown("activate");
     },
     removeDropdown() {
+      this.toggleDropdown("remove");
+    },
+
+    toggleDropdown(string) {
       let headerButton = document.querySelector(".header_burger");
       let headerMenu = document.querySelector(".header_menu");
-
-      document.body.classList.remove("lock");
-      headerButton.classList.remove("active");
-      headerMenu.classList.remove("active");
+      if (string === "activate") {
+        document.body.classList.toggle("lock");
+        headerButton.classList.toggle("active");
+        headerMenu.classList.toggle("active");
+      }
+      if (string === "remove") {
+        document.body.classList.remove("lock");
+        headerButton.classList.remove("active");
+        headerMenu.classList.remove("active");
+      }
     },
   },
 };
 </script>
-<style></style>
+<style lang="scss">
+@import "../assets/styles/header.scss";
+</style>
