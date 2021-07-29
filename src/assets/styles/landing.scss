@@ -9,6 +9,7 @@
     height: 100%;
     cursor: pointer;
     & .column {
+      z-index: 20;
       border: 1px solid #000;
       height: 100%;
       width: 100%;

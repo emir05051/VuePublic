@@ -57,6 +57,7 @@ export default {
       let href = this.getSrc(e);
       let description = this.getDescription(e);
       let personName = this.getName(e);
+
       this.$router.push({
         name: "PersonDetails",
         params: { id: href, description, personName },

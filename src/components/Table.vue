@@ -2,7 +2,7 @@
   <div class="content_image" @click="enlarge" ref="container">
     <img
       src="../../public/img/table.png"
-      width="80%"
+      width="60%"
       height="30%"
       class="minimized"
     />

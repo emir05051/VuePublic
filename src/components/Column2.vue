@@ -117,7 +117,7 @@ export default {
         height: 500,
         colors: ["#1b9e77", "#d95f02", "#7570b3"],
         legend: { position: "bottom" },
-        chartArea: { width: "100%", height: "80%" },
+        chartArea: { width: "80%", height: "80%" },
         annotations: {
           textStyle: {
             fontSize: 14,

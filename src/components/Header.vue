@@ -11,7 +11,7 @@
         <nav class="header_menu">
           <ul class="header_list">
             <li>
-              <router-link to="/home" class="header_link">
+              <router-link to="/structure" class="header_link">
                 <span @click="removeDropdown">Структура портфеля</span>
               </router-link>
             </li>

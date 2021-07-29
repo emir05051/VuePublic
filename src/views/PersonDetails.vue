@@ -1,10 +1,12 @@
 <template>
   <div class="main">
-    <div class="padding"></div>
+    <div class="padding" style="background-color: transparent"></div>
     <img :src="imgSrc" style="width: 100%; float: left" />
-    <h2>{{ personName }}</h2>
+    <h2>
+      <b>{{ personName }}</b>
+    </h2>
     <br />
-    {{ personDescription }}
+    <h5 class="pb-3">{{ personDescription }}</h5>
   </div>
 </template>
 

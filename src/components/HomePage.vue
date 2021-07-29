@@ -16,7 +16,7 @@
     </div>
     <Table />
     <div class="container">
-      <Paragraph msg="Преимущества УИП" />
+      <Paragraph msg="Наше преимущество" />
     </div>
     <h3>
       Доходность
@@ -32,21 +32,16 @@
       <Paragraph msg="Контроль деятельности УИП" />
     </div>
     <div class="container">
-      <Collapse />
+      <!-- <Collapse /> -->
+      <Control />
     </div>
     <div class="container">
       <Paragraph msg="Защита интересов вкладчиков в УИП" />
     </div>
     <div class="container">
       <ul class="benefit_list">
-        <li>
-          Обеспечение минимального уровня доходности. Отклонение на более чем
-          30%, финансируется за счет собственных средств ук
-        </li>
-        <li>
-          Прозрачность деятельности УК.Инвест. Декларация и ежемесячная
-          отчетность по портфелю будет размещаться на сайте УК и ЕНПФ
-        </li>
+        <li>Обеспечение минимального уровня доходности.</li>
+        <li>Прозрачность деятельности УК.</li>
         <li>Смена УК 1 раз в год, возрат в ЕНПФ через 2 года</li>
         <li>
           Контроль деятельности УПА со стороны АРРФР РК, ЕНПФ, Банк-Кастодиан
@@ -56,9 +51,9 @@
     <div class="container">
       <Paragraph msg="Ключевые показатели СС" />
     </div>
-    <div class="container m-0 p-0 w-100">
+    <!-- <div class="container m-0 p-0 w-100">
       <Pie />
-    </div>
+    </div> -->
     <div class="container">
       <Slider />
     </div>
@@ -70,8 +65,8 @@ import Table from "@/components/Table.vue";
 import Column1 from "@/components/Column1.vue";
 import Column2 from "@/components/Column2.vue";
 import Paragraph from "@/components/Paragraph.vue";
-import Collapse from "@/components/Collapse.vue";
-import Pie from "@/components/Pie.vue";
+import Control from "@/components/Control.vue";
+// import Collapse from "@/components/Collapse.vue";
 import Slider from "@/components/Slider.vue";
 
 export default {
@@ -88,7 +83,7 @@ export default {
   }),
   methods: {
     openNewTab() {
-      window.open("http://172.31.80.1:8082/pres.pdf");
+      window.open("http://192.168.1.103:8082/pres.pdf");
     },
   },
   components: {
@@ -96,8 +91,9 @@ export default {
     Column1,
     Column2,
     Paragraph,
-    Collapse,
-    Pie,
+    Control,
+    // Collapse,
+    // Pie,
     Slider,
   },
 };

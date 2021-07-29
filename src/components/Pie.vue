@@ -1,5 +1,5 @@
 <template>
-  <div class="pie-chart mb-5" ref="piechart">
+  <div class="pie-chart" ref="piechart">
     <GChart type="PieChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
@@ -8,7 +8,6 @@
 import { GChart } from "vue-google-charts";
 export default {
   name: "PieChart",
-
   components: {
     GChart,
   },
@@ -22,43 +21,64 @@ export default {
 
       return sum;
     },
-  },
-  mounted() {
-    if (window.innerWidth <= 680) {
-      this.chartOptions.legend.position = "none";
-      this.div.classList.add("pie-list");
+    createTable() {
+      this.table.classList.add("pie-list");
       let sum = this.getSumOfPieNumbers(this.chartData);
 
       this.chartData.map((el, idx) => {
         if (idx !== 0) {
-          let p = document.createElement("p");
-          let percentage = (el[1] / sum) * 100;
+          let tr = document.createElement("tr");
 
-          p.innerHTML = `${
-            el[0]
-          }: <span style="color:green; font-weight:bold">${percentage.toFixed(
-            1
-          )}%<span>`;
+          let tdColor = document.createElement("td");
+          let tdMain = document.createElement("td");
+          let tdPercent = document.createElement("td");
 
-          this.div.append(p);
+          let percentage = ((el[1] / sum) * 100).toFixed(1);
+
+          tdPercent.innerHTML = `<span style="color:green; font-weight:bold">${percentage}%</span>`;
+          tdColor.innerHTML = `<div class="" style="width: 10px; height: 10px; background-color: ${
+            this.arrayOfColors[idx - 1]
+          };"></div>`;
+
+          tdMain.innerHTML = `${el[0]}`;
+          tr.append(tdColor, tdMain, tdPercent);
+          this.table.append(tr);
+
+          document.querySelector(".pie-chart").after(this.table);
         }
       });
-
-      console.log(this.$refs.piechart.after(this.div));
-    } else {
-      this.chartOptions.legend.position = "right";
+    },
+  },
+  mounted() {
+    if (window.innerWidth < 800) {
+      this.chartOptions.chartArea.width = "70%";
+      this.chartOptions.chartArea.height = "100%";
     }
+
+    this.createTable();
   },
   data() {
     return {
-      div: document.createElement("div"),
+      arrayOfColors: [
+        "#3366cc",
+        "#dc3912",
+        "#ff9900",
+        "#109618",
+        "#990099",
+        "#0099c6",
+        "#dd4477",
+        "#66aa00",
+        "#b82e2e",
+        "#316395",
+      ],
+      table: document.createElement("table"),
       windowIsSmall: false,
       chartData: [
         ["Name", "Amount"],
         ["Наличные деньги", 1],
         ["Государственные ценные бумаги", 1],
         ["Корпоративные облигации в KZT и USD", 1],
-        ["Корпоративные акции в KZT в USD", 1],
+        ["Корпоративные акции в KZT в USD", 2],
         ["Депозитарные расписки", 5],
         ["Вклады в банках", 1],
         ["Финансовые инструменты Инвестиционных фондов", 1],
@@ -69,18 +89,17 @@ export default {
       chartOptions: {
         title: "Структура активов фонда по видам финансовых инструментов:",
         width: window.innerWidth / 1.1,
-        height: window.innerWidth / 2.5,
+        height: window.innerWidth / 3,
+
         titleTextStyle: {
-          bold: false,
+          bold: true,
           fontSize: 15,
         },
-        tooltip: {
-          textStyle: { color: "#000" },
-          showColorCode: true,
-          ignoreBounds: true,
+        pieSliceTextStyle: {
+          color: "transparent",
         },
-        chartArea: { width: "50%", height: "70%" },
-        legend: { position: "bottom" },
+        chartArea: { width: "50%", height: "60%" },
+        legend: { position: "none" },
       },
     };
   },
@@ -90,12 +109,16 @@ export default {
 <style>
 .pie-chart {
   margin-left: auto !important;
-  /* margin-right: auto; */
+  margin-right: auto;
+}
+path {
+  cursor: pointer;
 }
 .pie-list p {
   margin: 0;
 }
 .pie-list {
   margin-bottom: 30px;
+  text-align: start;
 }
 </style>
