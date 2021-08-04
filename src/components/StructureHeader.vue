@@ -1,6 +1,6 @@
 <template>
   <div class="structure_body container">
-    <h1>Наши финансовые показатели</h1>
+    <h3>Наши финансовые показатели</h3>
     <div class="row mt-3 w-100">
       <div class="col-4 col-md-4 info">
         <div class="font-weight-bold font-size-big">

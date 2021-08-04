@@ -18,12 +18,12 @@
     <div class="container">
       <Paragraph msg="Наше преимущество" />
     </div>
-    <h3>
+    <h5>
       Доходность
       <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ПИФов СС</a>
       и
       <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ЕНПФ</a>
-    </h3>
+    </h5>
     <div class="container ml-0 mr-0 p-0">
       <Column1 v-show="windowWidth" />
       <Column2 v-show="!windowWidth" />
@@ -32,7 +32,6 @@
       <Paragraph msg="Контроль деятельности УИП" />
     </div>
     <div class="container">
-      <!-- <Collapse /> -->
       <Control />
     </div>
     <div class="container">
@@ -51,9 +50,6 @@
     <div class="container">
       <Paragraph msg="Ключевые показатели СС" />
     </div>
-    <!-- <div class="container m-0 p-0 w-100">
-      <Pie />
-    </div> -->
     <div class="container">
       <Slider />
     </div>
