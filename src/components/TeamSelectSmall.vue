@@ -2,6 +2,7 @@
   <div class="our_team container">
     <div class="person_small" @click="open">
       <h3>Акинов Мурат</h3>
+      <h4 style="display: none">Председатель правления</h4>
       <img src="img/akinov.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         В Компании работает с 2004 г. Опыт работы более 14 лет в управлении
@@ -12,6 +13,9 @@
     </div>
     <div class="person_small" @click="open">
       <h3>Алмерекова Айнур</h3>
+      <h4 style="display: none">
+        Заместитель председателя правления. Член правления
+      </h4>
       <img src="img/almerekova.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
@@ -19,20 +23,37 @@
     </div>
     <div class="person_small" @click="open">
       <h3>Маржан Меланич</h3>
+      <h4 style="display: none">
+        Директор аналитического департамента. Член правления
+      </h4>
       <img src="img/melanic.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
       </p>
     </div>
     <div class="person_small" @click="open">
-      <h3>Кто то</h3>
+      <h3>Макпал Оразова</h3>
+      <h4 style="display: none">
+        Заместитель директора департамента управления активами
+      </h4>
       <img src="img/unknown.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
       </p>
     </div>
     <div class="person_small" @click="open">
-      <h3>Кто то</h3>
+      <h3>Айдын Наурызбаев</h3>
+      <h4 style="display: none">Директор департамента торговых операций</h4>
+      <img src="img/unkwnown1.jpg" style="width: 120px; height: 200px" />
+      <p style="display: none">
+        Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
+      </p>
+    </div>
+    <div class="person_small" @click="open">
+      <h3>Ашимова Ардак</h3>
+      <h4 style="display: none">
+        Вице президент департамента торговых операций
+      </h4>
       <img src="img/unkwnown1.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
@@ -54,25 +75,29 @@ export default {
   },
   methods: {
     open(e) {
-      let href = this.getSrc(e);
-      let description = this.getDescription(e);
-      let personName = this.getName(e);
+      let href = this.getSrc(e.target.parentNode);
+      let description = this.getDescription(e.target.parentNode);
+      let position = this.getPosition(e.target.parentNode);
+      let personName = this.getName(e.target.parentNode);
 
       this.$router.push({
         name: "PersonDetails",
-        params: { id: href, description, personName },
+        params: { id: href, description, personName, position },
       });
     },
-    getSrc(e) {
-      let image = e.target.parentNode.children[1].src;
-      let reg = /\w+/gm;
-      return image.match(reg)[4];
+    getSrc(element) {
+      let image = element.getElementsByTagName("img")[0].src;
+      let reg = /img\/(\w+)\./;
+      return image.match(reg)[1];
     },
-    getDescription(e) {
-      return e.target.parentNode.children[2].innerHTML;
+    getDescription(element) {
+      return element.getElementsByTagName("p")[0].innerText;
     },
-    getName(e) {
-      return e.target.parentNode.children[0].innerHTML;
+    getPosition(element) {
+      return element.getElementsByTagName("h4")[0].innerText;
+    },
+    getName(element) {
+      return element.getElementsByTagName("h3")[0].innerText;
     },
   },
 };

@@ -6,7 +6,7 @@
       width="175"
       height="230"
     />
-    <a :href="href">Скачать</a>
+    <a :href="href" style="color: blue">Скачать</a>
   </div>
 </template>
 

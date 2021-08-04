@@ -6,6 +6,7 @@
       height="30%"
       class="minimized"
     />
+    <a href="https://cesec.kz/paevyefondy">подробнее</a>
   </div>
 </template>
 
@@ -26,7 +27,11 @@ export default {
 
       return element;
     },
-    enlarge() {
+    enlarge(e) {
+      if (e.target.tagName == "A") {
+        return;
+      }
+
       let overflow = this.createElement("div", "overflow");
       document.getElementById("app").append(overflow);
 

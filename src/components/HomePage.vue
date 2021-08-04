@@ -4,9 +4,9 @@
       <h1 class="text-body" style="font-size: 2rem">
         Управление пенсионными активами
       </h1>
-      <b-button pill variant="primary" @click="openNewTab" class="p-3 mt-3">
+      <button @click="openNewTab" class="p-3 mt-3 btn-primary rounded-pill">
         Информация по продукту
-      </b-button>
+      </button>
     </div>
     <div class="container" style="padding-right: 0px; padding-left: 0px">
       <Paragraph
@@ -66,8 +66,6 @@ import Column1 from "@/components/Column1.vue";
 import Column2 from "@/components/Column2.vue";
 import Paragraph from "@/components/Paragraph.vue";
 import Control from "@/components/Control.vue";
-// import Collapse from "@/components/Collapse.vue";
-import Slider from "@/components/Slider.vue";
 
 export default {
   name: "HomePage",
@@ -83,7 +81,9 @@ export default {
   }),
   methods: {
     openNewTab() {
-      window.open("http://192.168.1.103:8082/pres.pdf");
+      window.open(
+        "https://cesec.kz/sites/default/files/files_pdf/pensionnoe_upravlenie_ss_2021.pdf"
+      );
     },
   },
   components: {
@@ -92,9 +92,7 @@ export default {
     Column2,
     Paragraph,
     Control,
-    // Collapse,
-    // Pie,
-    Slider,
+    Slider: () => import("@/components/Slider.vue"),
   },
 };
 </script>

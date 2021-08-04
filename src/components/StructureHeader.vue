@@ -1,10 +1,10 @@
 <template>
   <div class="structure_body container">
-    <h1>Показатели</h1>
-    <div class="row mt-3">
-      <div class="col-6 col-md-3 text-start">
+    <h1>Наши финансовые показатели</h1>
+    <div class="row mt-3 w-100">
+      <div class="col-4 col-md-4 info">
         <div class="font-weight-bold font-size-big">
-          13%
+          10 - 15%
           <br />
           годовых
         </div>
@@ -13,20 +13,9 @@
           доход
         </div>
       </div>
-      <div class="col-6 col-md-3 text-start">
+      <div class="col-4 col-md-4 info">
         <div class="font-weight-bold font-size-big">
-          4,30%
-          <br />
-          на {{ DateNow }}
-        </div>
-        <div class="subtext">
-          Увеличение стоимости одной условной единицы пенсионных активов с даты
-          принятия в управление
-        </div>
-      </div>
-      <div class="col-6 col-md-3 text-start">
-        <div class="font-weight-bold font-size-big">
-          1 868,4
+          462
           <br />
           млн тг
         </div>
@@ -35,13 +24,13 @@
           {{ DateNow }}
         </div>
       </div>
-      <div class="col-6 col-md-3 text-start">
+      <div class="col-4 col-md-4 info">
         <div class="font-weight-bold font-size-big">
-          0%
+          7.5%
           <br />
           за управление
         </div>
-        <div class="subtext">только 5% от инвестиционного дохода</div>
+        <div class="subtext">Только от инвестиционного дохода, 1 раз в год</div>
       </div>
     </div>
   </div>
@@ -58,6 +47,7 @@ export default {
       let date = this.addNull(this.data.getDate());
       let month = this.addNull(this.data.getMonth() + 1);
       let year = this.data.getFullYear();
+
       return `${date}.${month}.${year}`;
     },
   },
@@ -66,8 +56,16 @@ export default {
       if (date < 10) {
         return `0${date}`;
       }
+
       return date;
     },
   },
 };
 </script>
+<style lang="scss">
+.subtext {
+  color: #709dcc;
+  font-size: 16px !important;
+  font-weight: bolder;
+}
+</style>

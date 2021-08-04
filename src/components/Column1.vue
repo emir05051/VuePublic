@@ -95,7 +95,7 @@ export default {
 
         width: window.innerWidth - 35,
         height: 500,
-        colors: ["#1b9e77", "#d95f02", "#7570b3"],
+        colors: ["#7570b3", "#d95f02", "#1b9e77"],
       });
     },
   },

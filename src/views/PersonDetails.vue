@@ -5,6 +5,7 @@
     <h2>
       <b>{{ personName }}</b>
     </h2>
+    <h4>{{ personPosition }}</h4>
     <br />
     <h5 class="pb-3">{{ personDescription }}</h5>
   </div>
@@ -17,6 +18,7 @@ export default {
     personId: "",
     personName: "",
     personDescription: "",
+    personPosition: "",
   }),
   computed: {
     personGetId() {
@@ -28,6 +30,9 @@ export default {
     personGetName() {
       return this.$route.params.personName;
     },
+    personGetPosition() {
+      return this.$route.params.position;
+    },
     imgSrc() {
       return "/img/" + this.personGetId + ".jpg";
     },
@@ -36,6 +41,7 @@ export default {
     this.personId = this.personGetId;
     this.personName = this.personGetName;
     this.personDescription = this.personGetDescription;
+    this.personPosition = this.personGetPosition;
   },
 };
 </script>

@@ -39,7 +39,7 @@
         />
         <Person
           imgSrc="none2"
-          name="Ашымова Ардак"
+          name="Ашимова Ардак"
           position="Вице президент департамента торговых операций"
           description="Description"
         />
@@ -62,47 +62,6 @@ export default {
   },
 };
 </script>
-<style>
-.team_cards {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.team_cards_row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.team_cards img {
-  width: 180px;
-  border: 1px solid black;
-}
-img.active {
-  width: 25%;
-  height: 60%;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .team_cards_row {
-    flex-wrap: wrap;
-  }
-  img.active {
-    width: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .team_cards_row {
-    flex-wrap: wrap;
-  }
-  img.active {
-    width: 50%;
-  }
-}
-@media (max-width: 500px) {
-  .team_cards_row {
-    flex-wrap: wrap;
-  }
-  img.active {
-    min-width: 270px;
-  }
-}
+<style lang="scss">
+@import "../assets/styles/team-select.scss";
 </style>

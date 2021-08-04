@@ -4,7 +4,7 @@
       <div>
         <p>Агентство РК по регулированию и развитию финансового рынка</p>
         <img
-          src="https://www.election.gov.kz/theme/cik/images/symbolls/gerb-in.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Emblem_of_Kazakhstan.svg/220px-Emblem_of_Kazakhstan.svg.png"
           alt="gerb"
         />
         <span>Регулирование и надзор</span>
@@ -43,55 +43,5 @@
 </template>
 
 <style lang="scss">
-.control_container {
-  justify-content: space-between;
-  //   align-items: stretch;
-  span {
-    font-size: 11px;
-    font-weight: bold;
-  }
-  p {
-    height: 96px;
-    text-align: center;
-    color: #8390e2;
-  }
-  div {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  img {
-    width: 100px;
-  }
-}
-.manager {
-  margin-top: 1.75rem;
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  h5 {
-    color: #8390e2;
-    font-weight: bold;
-  }
-  span {
-    color: #8390e2;
-    font-weight: bold;
-  }
-  .manager_list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-@media (max-width: 500px) {
-  .manager {
-    flex-direction: column;
-  }
-  .control_container {
-    justify-content: center;
-  }
-}
+@import "../assets/styles/control.scss";
 </style>
