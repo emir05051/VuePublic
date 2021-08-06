@@ -1,5 +1,14 @@
+.about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about_container {
+  display: flex;
+  flex-direction: row;
+}
 .about .container {
-  height: 100%;
   padding-right: 0;
   padding-left: 0;
   margin-left: auto;
@@ -50,8 +59,8 @@
   }
 }
 
-@media (max-width: 800px) {
-  .contact_link h1 {
+@media (max-width: 700px) {
+  .about h1 {
     display: none;
   }
 }
@@ -69,14 +78,18 @@
       border-color: white;
     }
   }
-
+  .about {
+    display: block;
+  }
+  .about_container {
+    flex-direction: column;
+  }
   .b24-form {
     width: 100% !important;
   }
   .contact_link {
     margin: 0 auto;
     flex: 1 0 50% !important;
-    max-width: 20% !important;
   }
   .contact_content {
     flex-direction: column !important;
@@ -93,7 +106,7 @@
     height: 100vh;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 2100px) {
   .about .container {
     height: 100%;
     padding-right: 0;

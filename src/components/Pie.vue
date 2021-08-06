@@ -82,8 +82,8 @@ export default {
       ],
       chartOptions: {
         title: "Структура активов фонда по видам финансовых инструментов:",
-        width: window.innerWidth / 1.1,
-        height: window.innerWidth / 3,
+        width: window.innerWidth / 1.5,
+        height: window.innerWidth / 3.67,
 
         titleTextStyle: {
           bold: true,
@@ -101,10 +101,6 @@ export default {
 </script>
 
 <style>
-.pie-chart {
-  margin-left: auto !important;
-  margin-right: auto;
-}
 path {
   cursor: pointer;
 }

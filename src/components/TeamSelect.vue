@@ -1,5 +1,5 @@
 <template>
-  <div class="our_team">
+  <div class="ml-4 mr-4">
     <div class="team_cards">
       <div class="team_cards_row">
         <Person

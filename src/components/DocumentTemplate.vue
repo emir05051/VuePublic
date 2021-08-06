@@ -3,8 +3,8 @@
     <p>{{ document_title }}</p>
     <img
       :src="`/img/${imageSource}.${imageExtension}`"
-      width="175"
-      height="230"
+      width="215"
+      height="235"
     />
     <a :href="href" style="color: blue">Скачать</a>
   </div>
