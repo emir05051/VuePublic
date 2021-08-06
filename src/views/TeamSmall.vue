@@ -1,5 +1,5 @@
 <template>
-  <div class="our_team">
+  <div class="our_team_small">
     <div class="padding"></div>
 
     <TeamSelectSmall />
