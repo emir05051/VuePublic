@@ -21,7 +21,7 @@
       </div>
       <div @click="divClick" class="documents_button div_button">ДОКУМЕНТЫ</div>
     </div>
-    <div class="col pie-active">
+    <div class="row pie-active">
       <Pie />
     </div>
     <div class="col hidden shares-hidden">
@@ -135,92 +135,5 @@ export default {
 </script>
 
 <style lang="scss">
-.structure_body {
-  text-align: start;
-}
-.font-size-big {
-  font-size: calc(1.1rem + 0.9vw);
-  margin: 15px 0;
-}
-.subtext {
-  font-size: 15px;
-}
-.structure_button {
-  div {
-    margin-left: 30px;
-    padding: 15px 30px;
-    font-weight: bold;
-    border-radius: 20px;
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    cursor: pointer;
-    transition: box-shadow 0.3s linear, background 0.3s linear;
-    white-space: nowrap;
-  }
-}
-.structure {
-  & .col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-td {
-  padding-left: 15px;
-}
-.structure_button {
-  flex-direction: row;
-}
-
-.structure {
-  display: flex;
-  flex-direction: column;
-}
-.documents {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-
-  justify-content: flex-start;
-  div {
-    margin-right: 10px;
-  }
-}
-.hidden {
-  display: none !important;
-}
-.button_focused {
-  background: #cb60b3 !important;
-
-  color: #fff;
-}
-
-.div_button:hover {
-  color: #fff;
-  background: #cb60b3 !important;
-  box-shadow: -3px -3px 7px -0px #a65899 inset;
-}
-@media (max-width: 820px) {
-  .structure_button {
-    flex-direction: column;
-    align-items: stretch !important;
-    div {
-      margin-bottom: 10px;
-      margin-left: 0;
-    }
-  }
-}
-
-@media (max-width: 590px) {
-  .documents {
-    flex-direction: column !important;
-  }
-}
-@media (max-width: 500px) {
-  .subtext {
-    word-wrap: break-word;
-  }
-  .font-size-big {
-    word-wrap: break-word;
-  }
-}
+@import "../assets/styles/structure.scss";
 </style>
