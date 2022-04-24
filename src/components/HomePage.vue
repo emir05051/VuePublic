@@ -4,8 +4,8 @@
       <h1 class="text-body" style="font-size: 2rem">
         Управление пенсионными активами
       </h1>
-      <button @click="openNewTab" class="p-3 mt-3 btn-primary rounded-pill">
-        Информация по продукту
+      <button @click="openNewTab" class="p-3 mt-5 btn-danger rounded-pill">
+        <b style="font-size: calc(0.6vw + 1rem)">Информация по продукту</b>
       </button>
     </div>
     <div class="container" style="padding-right: 0px; padding-left: 0px">
@@ -20,9 +20,9 @@
     </div>
     <h5>
       Доходность
-      <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ПИФов СС</a>
+      <a href="/" style="color: #2c3e50">ПИФов СС</a>
       и
-      <a href="https://cesec.kz/paevyefondy" style="color: #2c3e50">ЕНПФ</a>
+      <a href="/" style="color: #2c3e50">ЕНПФ</a>
     </h5>
     <div class="container ml-0 mr-0 p-0">
       <Column1 v-show="windowWidth" />
@@ -77,9 +77,7 @@ export default {
   }),
   methods: {
     openNewTab() {
-      window.open(
-        "https://cesec.kz/sites/default/files/files_pdf/pensionnoe_upravlenie_ss_2021.pdf"
-      );
+      window.open("");
     },
   },
   components: {

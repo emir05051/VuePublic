@@ -6,7 +6,7 @@
       height="30%"
       class="minimized"
     />
-    <a href="https://cesec.kz/paevyefondy">подробнее</a>
+    <a href="">подробнее</a>
   </div>
 </template>
 

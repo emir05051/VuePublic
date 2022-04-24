@@ -6,9 +6,7 @@
       <div class="about_container">
         <div class="row col-12 col-md-12 col-lg-6 col-xl-6 contact_link">
           <div class="col-md-5 col-lg-5 card border_map contact_item">
-            <a href="https://goo.gl/maps/2eVctJNMY1EaefHw7"
-              ><img src="img/map.png" alt=""
-            /></a>
+            <a href=""><img src="img/map.png" alt="" /></a>
             <h6>Адрес</h6>
             <p class="card_text">
               <b>Республика Казахстан, г. Алматы, ул. Манаса, 32А</b>
@@ -29,11 +27,9 @@
             <p class="card_text"><b>info@centras.kz</b></p>
           </div>
           <div class="col-md-5 col-lg-5 card border_earth contact_item">
-            <a href="http://www.cesec.kz" target="_blank"
-              ><img src="img/earth.png"
-            /></a>
+            <a href="/" target="_blank"><img src="img/earth.png" /></a>
             <h6>Официальный WEB-сайт</h6>
-            <a href="http://www.cesec.kz" target="_blank"
+            <a href="/" target="_blank"
               ><p class="card_text">www.cesec.kz</p></a
             >
           </div>

@@ -1,9 +1,9 @@
 <template>
   <div class="our_team container">
     <div class="person_small" @click="open">
-      <h3>Акинов Мурат</h3>
+      <h3>NAME</h3>
       <h4 style="display: none">Председатель правления</h4>
-      <img src="img/akinov.jpg" style="width: 120px; height: 200px" />
+      <img src="img/unkwnown4.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         В Компании работает с 2004 г. Опыт работы более 14 лет в управлении
         активами Магистр 'MSc in Quantitative Finance' в Adam Smith Business
@@ -12,27 +12,27 @@
       </p>
     </div>
     <div class="person_small" @click="open">
-      <h3>Алмерекова Айнур</h3>
+      <h3>NAME</h3>
       <h4 style="display: none">
         Заместитель председателя правления. Член правления
       </h4>
-      <img src="img/almerekova.jpg" style="width: 120px; height: 200px" />
+      <img src="img/unkwnown5.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
       </p>
     </div>
     <div class="person_small" @click="open">
-      <h3>Маржан Меланич</h3>
+      <h3>NAME</h3>
       <h4 style="display: none">
         Директор аналитического департамента. Член правления
       </h4>
-      <img src="img/melanic.jpg" style="width: 120px; height: 200px" />
+      <img src="img/unkwnown6.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
       </p>
     </div>
     <div class="person_small" @click="open">
-      <h3>Макпал Оразова</h3>
+      <h3>NAME</h3>
       <h4 style="display: none">
         Заместитель директора департамента управления активами
       </h4>
@@ -42,7 +42,7 @@
       </p>
     </div>
     <div class="person_small" @click="open">
-      <h3>Айдын Наурызбаев</h3>
+      <h3>NAME</h3>
       <h4 style="display: none">Директор департамента торговых операций</h4>
       <img src="img/unkwnown1.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
@@ -50,11 +50,11 @@
       </p>
     </div>
     <div class="person_small" @click="open">
-      <h3>Ашимова Ардак</h3>
+      <h3>NAME</h3>
       <h4 style="display: none">
         Вице президент департамента торговых операций
       </h4>
-      <img src="img/unkwnown1.jpg" style="width: 120px; height: 200px" />
+      <img src="img/unkwnown2.jpg" style="width: 120px; height: 200px" />
       <p style="display: none">
         Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»
       </p>

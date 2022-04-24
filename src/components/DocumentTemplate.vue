@@ -1,11 +1,9 @@
 <template>
   <div class="document" @click="immitateClick">
-    <p>{{ document_title }}</p>
-    <img
-      :src="`/img/${imageSource}.${imageExtension}`"
-      width="215"
-      height="235"
-    />
+    <p class="font-size-big_shares">
+      <b style="color: black">{{ document_title }}</b>
+    </p>
+    <img :src="`/img/${imageSource}.${imageExtension}`" />
     <a :href="href" style="color: blue">Скачать</a>
   </div>
 </template>
@@ -35,5 +33,12 @@ export default {
   a {
     color: #16132c;
   }
+  img {
+    width: 15vw;
+    min-width: 215px;
+  }
+}
+.font-size-big_shares {
+  font-size: calc(0.3vw + 0.8rem);
 }
 </style>

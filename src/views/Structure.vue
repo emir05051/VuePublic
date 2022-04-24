@@ -7,19 +7,21 @@
         d-flex
         align-items-center
         justify-content-center
-        mt-3
+        mt-5
         mb-3
         flex-grow
         structure_button
       "
     >
-      <div @click="divClick" class="pie_button div_button button_focused">
-        РАСПРЕДЕЛЕНИЕ АКТИВОВ
-      </div>
-      <div @click="divClick" class="shares_button div_button">
-        СОСТАВ ПОРТФЕЛЯ
-      </div>
-      <div @click="divClick" class="documents_button div_button">ДОКУМЕНТЫ</div>
+      <button @click="divClick" class="pie_button div_button button_focused">
+        Распределение активов
+      </button>
+      <button @click="divClick" class="shares_button div_button">
+        Состав портфеля
+      </button>
+      <button @click="divClick" class="documents_button div_button">
+        Наши документы
+      </button>
     </div>
     <div class="row pie-active">
       <Pie />
@@ -28,36 +30,36 @@
       <Shares />
     </div>
     <div class="col hidden documents-hidden">
-      <div class="documents">
+      <div class="documents mt-1">
         <DocumentTemplate
           document_title="Инвестиционная декларация"
           imageSource="pension"
-          imageExtension="jpeg"
-          href="https://cesec.kz/sites/default/files/files_pdf/id_pa_na_russ.pdf"
+          imageExtension="jpg"
+          href=""
         />
         <DocumentTemplate
           document_title="Апрель"
           imageSource="pension"
-          imageExtension="jpeg"
-          href="https://portfoliows.enpf.kz/portfoliopdf/downloadPdf/guid=639f7e83-1b0c-4e9a-88ce-59159cc88b2a"
+          imageExtension="jpg"
+          href=""
         />
         <DocumentTemplate
           document_title="Май"
           imageSource="pension"
-          imageExtension="jpeg"
-          href="https://portfoliows.enpf.kz/portfoliopdf/downloadPdf/guid=3376db7e-dc8d-4d31-a62d-4505878b6567"
+          imageExtension="jpg"
+          href=""
         />
         <DocumentTemplate
           document_title="Июнь"
           imageSource="pension"
-          imageExtension="jpeg"
-          href="https://portfoliows.enpf.kz/portfoliopdf/downloadPdf/guid=4cf33f81-7ee5-40ff-8086-83ef6ca157b1"
+          imageExtension="jpg"
+          href=""
         />
         <DocumentTemplate
           document_title="Июль"
           imageSource="pension"
-          imageExtension="jpeg"
-          href="https://portfoliows.enpf.kz/portfoliopdf/downloadPdf/guid=ccf09569-761d-49b7-a975-ae7a0caf247d"
+          imageExtension="jpg"
+          href=""
         />
       </div>
     </div>

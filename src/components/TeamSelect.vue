@@ -3,8 +3,8 @@
     <div class="team_cards">
       <div class="team_cards_row">
         <Person
-          imgSrc="akinov"
-          name="Акинов Мурат"
+          imgSrc="none4"
+          name=""
           position="Председатель правления"
           description="В Компании работает с 2004 г. Опыт работы более 14 лет в управлении
             активами Магистр 'MSc in Quantitative Finance' в Adam Smith Business
@@ -12,14 +12,14 @@
             «Заслуженный финансист»"
         />
         <Person
-          imgSrc="almerekova"
-          name="Алмерекова Айнур"
+          imgSrc="none5"
+          name=""
           position="Заместитель председателя правления. Член правления"
           description="Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»"
         />
         <Person
-          imgSrc="melanic"
-          name="Меланич Маржан"
+          imgSrc="none6"
+          name=""
           position="Директор аналитического департамента. Член правления"
           description="Стаж работы в финансовой сфере более 10 лет «Заслуженный финансист»"
         />
@@ -27,19 +27,19 @@
       <div class="team_cards_row">
         <Person
           imgSrc="none"
-          name="Макпал Оразова"
+          name=""
           position="Заместитель директора департамента управления активами"
           description="Description"
         />
         <Person
           imgSrc="none1"
-          name="Айдын Наурызбаев"
+          name=""
           position="Директор департамента торговых операций"
           description="Description"
         />
         <Person
           imgSrc="none2"
-          name="Ашимова Ардак"
+          name=""
           position="Вице президент департамента торговых операций"
           description="Description"
         />

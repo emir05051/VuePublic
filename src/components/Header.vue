@@ -3,10 +3,7 @@
     <div class="container header_section">
       <div class="header_body">
         <router-link to="/" class="header_logo">
-          <img
-            src="../../public/img/logo-securities.png"
-            @click="removeDropdown"
-          />
+          <img src="" @click="removeDropdown" alt="logo" />
         </router-link>
         <nav class="header_menu">
           <ul class="header_list">

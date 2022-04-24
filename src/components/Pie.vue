@@ -54,7 +54,9 @@ export default {
       this.chartOptions.chartArea.width = "70%";
       this.chartOptions.chartArea.height = "100%";
     }
-
+    if (window.innerWidth > 1800) {
+      this.chartOptions.width = window.innerWidth / 2.2;
+    }
     this.createTable();
   },
   data() {
